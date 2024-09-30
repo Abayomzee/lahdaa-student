@@ -10,8 +10,10 @@
   --color-3: #1d1d23;
   --color-4: #e0e0e0;
   --color-5: #bdbdbd;
-  /* --color-6: #ededed; */
-  --color-6: #8b8b8b;
+  --color-6: #ededed;
+  /* --color-6: #8b8b8b; */
+  --color-7: #030014;
+  --color-8: #f9f9f9;
 }
 /* variables end ================== */
 
@@ -176,7 +178,7 @@ body {
   flex-shrink: 0;
 
   height: 100vh;
-  /* background-color: tomato; */
+  background-color: var(--color-white);
 
   display: flex;
   flex-direction: column;
@@ -192,6 +194,27 @@ body {
   border-block: 1px solid var(--color-6);
   padding-block: 3rem;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dashboard-left-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.side-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.4rem 1.8rem;
+  border-radius: 0.6rem;
+
+  &.active {
+    background-color: var(--color-8);
+  }
 }
 
 .dashboard-right {
@@ -327,6 +350,14 @@ body {
   font-weight: 500;
   line-height: 2.6rem;
   color: var(--color-2);
+  text-decoration: none;
+}
+
+.l2 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--color-7);
   text-decoration: none;
 }
 
