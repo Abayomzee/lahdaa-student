@@ -17,6 +17,7 @@
   --color-9: #84818a;
   --color-10: #c9c9c9;
   --color-11: #c8c8c9;
+  --color-12: #666664;
 }
 /* variables end ================== */
 
@@ -395,6 +396,36 @@ body {
   color: var(--color-1);
 }
 
+.h4 {
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 130%;
+  color: var(--color-12);
+}
+
+.h5 {
+  font-family: Athelas;
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 130%;
+  vertical-align: middle;
+
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+
+  color: var(--color-black);
+}
+
+.h6 {
+  font-family: inter;
+  font-size: 6.4rem;
+  font-weight: 500;
+  line-height: 140%;
+
+  color: var(--color-black);
+}
+
 /* Paragraphs */
 .p1 {
   font-size: 2rem;
@@ -408,6 +439,14 @@ body {
   font-weight: 400;
   line-height: 31px;
   color: var(--color-3);
+}
+
+.p3 {
+  font-family: Inter;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--color-12);
 }
 
 /* links */
