@@ -14,6 +14,9 @@
   /* --color-6: #8b8b8b; */
   --color-7: #030014;
   --color-8: #f9f9f9;
+  --color-9: #84818a;
+  --color-10: #c9c9c9;
+  --color-11: #c8c8c9;
 }
 /* variables end ================== */
 
@@ -211,8 +214,13 @@ body {
   gap: 1.2rem;
   padding: 1.4rem 1.8rem;
   border-radius: 0.6rem;
+  transition: 0.4s;
 
   &.active {
+    background-color: var(--color-8);
+  }
+
+  &:hover {
     background-color: var(--color-8);
   }
 }
@@ -224,16 +232,64 @@ body {
 .dashboard-top-nav {
   padding-inline: 5rem;
   padding-block: 3rem;
-  background-color: tomato;
+  /* background-color: tomato; */
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  .user-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  .user-icon-container {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+  }
+
+  .user-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.dashboard-search-input {
+  border-radius: 1.2rem;
+  border: 1px solid var(--color-10);
+  display: flex;
+  align-items: center;
+  flex-basis: 40rem;
+  gap: 1rem;
+  /* background-color: red; */
+  padding-right: 1rem;
+  background-color: var(--color-white);
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 1.15rem 1rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.search-input::placeholder {
+  color: var(--color-11);
+  font-family: Inter;
+  font-size: 1.6rem;
+  font-weight: 300;
 }
 
 .dashboard-body {
   padding-inline: 5rem;
+  padding-block: 4rem;
 }
+
 /* Dashboard page style */
 
 /* app style end ================== */
@@ -253,6 +309,20 @@ body {
 .center-md {
   max-width: 1440px;
   margin-inline: auto;
+}
+.dashboard-center {
+  --max-width-md: auto;
+  --max-width-lg: 115rem;
+
+  max-width: var(--max-width-md);
+  margin-inline: auto;
+  /* background-color: dodgerblue; */
+}
+
+@media only screen and (min-width: 1600px) {
+  .dashboard-center {
+    max-width: var(--max-width-lg);
+  }
 }
 
 /* Margins */
@@ -448,6 +518,17 @@ body {
   font-weight: 400;
   padding: 1.2rem 3rem;
   padding-left: 0;
+}
+
+.btn-5 {
+  font-family: Inter;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-9);
+  background-color: var(--color-6);
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.6rem;
 }
 
 .btn-md {
