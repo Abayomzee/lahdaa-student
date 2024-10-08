@@ -18,6 +18,10 @@
   --color-10: #c9c9c9;
   --color-11: #c8c8c9;
   --color-12: #666664;
+  --color-13: #ffddf7;
+  --color-14: #0d0c22;
+  --color-15: #787b89;
+  --color-16: #040035;
 }
 /* variables end ================== */
 
@@ -291,6 +295,33 @@ body {
   padding-block: 4rem;
 }
 
+.course-overview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.LH {
+  flex-grow: 1;
+}
+
+.overview-details {
+  flex-basis: 58rem;
+}
+
+.course-overview-stat {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.recommended-learning {
+  border-radius: 2.1rem;
+  background-color: #0000001e;
+  padding: 3.2rem;
+}
+
 /* Dashboard page style */
 
 /* app style end ================== */
@@ -332,6 +363,9 @@ body {
 }
 .mt110 {
   margin-top: 11rem;
+}
+.mt100 {
+  margin-top: 10rem;
 }
 .mt80 {
   margin-top: 8rem;
@@ -422,8 +456,40 @@ body {
   font-size: 6.4rem;
   font-weight: 500;
   line-height: 140%;
-
   color: var(--color-black);
+}
+
+.h7 {
+  font-family: Athelas;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--color-15);
+}
+
+.h8 {
+  font-family: Inter;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 77.45px;
+  text-align: center;
+  color: var(--color-16);
+}
+
+.h9 {
+  color: var(--color-white);
+  font-family: Inter;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.h10 {
+  font-family: Inter;
+  font-size: 3.219rem;
+  font-weight: 500;
+  line-height: 120%;
+  color: var(--color-white);
 }
 
 /* Paragraphs */
@@ -509,9 +575,17 @@ body {
 
 /* Buttons */
 .btn {
-  all: unset;
+  /* all: unset; */
+  border: none;
+  outline: none;
   font-family: inherit;
   cursor: pointer;
+  display: inline-block;
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
 }
 
 .btn-align-center {
@@ -568,6 +642,20 @@ body {
   gap: 1rem;
   padding: 1rem 1.5rem;
   border-radius: 0.6rem;
+}
+
+.btn-6 {
+  gap: 1rem;
+  display: flex;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1.5rem;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  font-family: Athelas;
+  border-radius: 0.6rem;
+  color: var(--color-14);
+  background-color: var(--color-13);
 }
 
 .btn-md {
