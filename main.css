@@ -24,6 +24,9 @@
   --color-16: #040035;
   --color-17: #ddf2ff;
   --color-18: #eef0ff;
+  --color-19: #647382;
+  --color-20: #02001b;
+  --color-21: #04003533;
 }
 /* variables end ================== */
 
@@ -336,7 +339,7 @@ body {
 .milestones {
   background-color: var(--color-18);
   border-radius: 1.6rem;
-  padding: 4rem;
+  padding: 2.5rem 3rem;
 }
 
 .milestones__top {
@@ -344,6 +347,25 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+}
+
+.lh-sm {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+}
+
+.progress {
+  border-radius: 6rem;
+  height: 0.8rem;
+  background-color: var(--color-21);
+  margin-block: 0.7rem;
 }
 
 .overview-details {
@@ -440,6 +462,12 @@ body {
 }
 .mt100 {
   margin-top: 10rem;
+}
+.mt80 {
+  margin-top: 8rem;
+}
+.mt70 {
+  margin-top: 7rem;
 }
 .mt80 {
   margin-top: 8rem;
@@ -574,6 +602,22 @@ body {
   line-height: 135%;
 }
 
+.h12 {
+  font-family: Inter;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--color-19);
+}
+
+.h13 {
+  font-family: Athelas;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--color-20);
+}
+
 /* Paragraphs */
 .p1 {
   font-size: 2rem;
@@ -610,6 +654,15 @@ body {
   font-family: Inter;
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+.p6 {
+  font-family: Inter;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13.31px;
+  text-align: left;
+  color: var(--color-19);
 }
 
 /* links */
