@@ -1,0 +1,146 @@
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+
+export default function UserDashboard() {
+  const sideNavItems = [
+    { icon: "home-icon.svg", text: "Home", active: true },
+    { icon: "learning-icon.svg", text: "Learning Path" },
+    { icon: "courses-icon.svg", text: "Courses" },
+    { icon: "session-icon.svg", text: "Sessions" },
+    { icon: "workshops-icon.svg", text: "Workshops" },
+    { icon: "community-icon.svg", text: "Community" },
+    { icon: "resources-icon.svg", text: "Resources" },
+  ];
+
+  const bottomNavItems = [
+    { icon: "settings-icon.svg", text: "Setting" },
+    { icon: "points-icon.svg", text: "Learning Points" },
+    { icon: "log-out-icon.svg", text: "Log out" },
+  ];
+
+  return (
+    <main className="flex min-h-screen bg-[#F3F3F3]">
+      {/* Dashboard left */}
+      <div className="w-64 bg-white flex flex-col h-screen sticky top-0 border-r border-[#EDEDED]">
+        <div className="p-8">
+          <Image src="/assets/images/logo-blue.svg" alt="Logo" width={150} height={40} />
+        </div>
+        <div className="flex-grow py-12 border-y border-[#EDEDED]">
+          {sideNavItems.map((item, index) => (
+            <Link key={index} href="#" className={`flex items-center p-4 mx-4 mb-4 ${item.active ? 'bg-[#F9F9F9] text-[#0A0222]' : 'text-[#030014] hover:bg-[#F9F9F9]'} rounded-md transition-colors`}>
+              <Image src={`/assets/images/${item.icon}`} alt="" width={24} height={24} className="mr-3" />
+              <span className="text-sm">{item.text}</span>
+            </Link>
+          ))}
+        </div>
+        <div className="p-8">
+          {bottomNavItems.map((item, index) => (
+            <Link key={index} href="#" className="flex items-center p-4 mb-4 text-[#030014] hover:bg-[#F9F9F9] rounded-md transition-colors">
+              <Image src={`/assets/images/${item.icon}`} alt="" width={24} height={24} className="mr-3" />
+              <span className="text-sm">{item.text}</span>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* Dashboard right */}
+      <div className="flex-grow">
+        <div className="max-w-[115rem] mx-auto px-4 py-6">
+          {/* Top navigation */}
+          <div className="flex justify-between items-center mb-8 bg-white p-6 rounded-lg">
+            <div className="relative flex-grow max-w-xl">
+              <input type="text" placeholder="Search" className="w-full pl-10 pr-4 py-3 rounded-xl border border-[#C9C9C9] bg-white" />
+              <Image src="/assets/images/lens-icon.svg" alt="" width={20} height={20} className="absolute left-3 top-1/2 transform -translate-y-1/2" />
+            </div>
+            <div className="flex items-center space-x-4">
+              <button className="p-2 hover:bg-[#F9F9F9] rounded-full transition-colors"><Image src="/assets/images/notification-icon.svg" alt="" width={24} height={24} /></button>
+              <button className="p-2 hover:bg-[#F9F9F9] rounded-full transition-colors"><Image src="/assets/images/message-icon.svg" alt="" width={24} height={24} /></button>
+              <div className="w-8 h-8 rounded-full overflow-hidden">
+                <Image src="/assets/images/user-icon.png" alt="User" width={32} height={32} />
+              </div>
+              <button className="flex items-center bg-[#EDEDED] text-[#84818A] px-4 py-2 rounded-md hover:bg-[#E0E0E0] transition-colors">
+                <Image src="/assets/images/calendar-icon.svg" alt="" width={20} height={20} className="mr-2" />
+                Connect
+              </button>
+            </div>
+          </div>
+
+          {/* Dashboard body */}
+          <div>
+            <h1 className="text-2xl font-light text-[#666664] mb-2">Welcome</h1>
+            <h2 className="text-3xl font-normal mb-2"><span className="text-[#0A0222] text-6xl font-medium mr-4">13</span> Courses recommended for you</h2>
+            <p className="text-base text-[#666664] mb-8">Here are your personalised results. Scroll down to view your recommended courses</p>
+
+            <button className="flex items-center bg-[#FFDDF7] text-[#0D0C22] px-6 py-3 rounded-md font-normal text-base hover:bg-[#FFD0F2] transition-colors">
+              Start with learning path
+              <Image src="/assets/images/blue-arrow-right.svg" alt="" width={24} height={24} className="ml-2" />
+            </button>
+
+            {/* Course Overview */}
+            <div className="flex mt-12 space-x-8">
+              {/* LH Section */}
+              <div className="w-1/3 bg-white p-6 rounded-lg">
+                <div className="flex items-center mb-6">
+                  <Image src="/assets/images/lh-img.png" alt="LH" width={100} height={100} className="rounded-full mr-4" />
+                  <div>
+                    <h3 className="text-2xl font-medium">Hi, I&apos;m LH</h3>
+                    <p className="text-xs text-[#666664] uppercase font-medium">your ai accountability partner</p>
+                    <button className="mt-4 bg-[#0A0222] text-white px-6 py-3 rounded-md text-sm uppercase flex items-center hover:bg-[#1A1232] transition-colors">
+                      Lets Chat
+                      <Image src="/assets/images/stars-icon.svg" alt="" width={20} height={20} className="ml-2" />
+                    </button>
+                  </div>
+                </div>
+
+                <div className="mt-8 bg-[#EEF0FF] p-6 rounded-lg">
+                  <div className="flex justify-between items-center mb-4">
+                    <h5 className="text-sm text-[#647382]">Complete your first course</h5>
+                    <Image src="/assets/images/lh-img.png" alt="LH" width={30} height={30} className="rounded-full" />
+                  </div>
+                  <h5 className="text-base font-normal mb-2 text-[#02001B]">Unlock milestone and get points</h5>
+                  <div className="w-full bg-[#04003533] rounded-full h-2 mb-2">
+                    <div className="bg-[#0A0222] h-2 rounded-full" style={{width: '0%'}}></div>
+                  </div>
+                  <p className="text-[11px] text-[#647382]">0% Progress - 24 points</p>
+                </div>
+              </div>
+
+              {/* Overview Details */}
+              <div className="w-2/3">
+                {/* Course overview stats */}
+                <div className="grid grid-cols-4 gap-4 mb-8">
+                  {['Total Enrolled', 'Course Completed', 'Active Enrolled', 'Session Completed'].map((stat, index) => (
+                    <div key={index} className="bg-white p-4 rounded-lg text-center">
+                      <h5 className="text-base text-[#787B89] mb-2">{stat}</h5>
+                      <h2 className="text-6xl font-medium text-[#040035]">0</h2>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Recommended Learning */}
+                <div className="bg-[url('/assets/images/overview-card-bg.png')] bg-cover bg-center p-8 rounded-2xl text-white">
+                  <h6 className="text-sm font-normal mb-24">Recommended Live Learning</h6>
+                  <div className="flex items-end justify-between">
+                    <div>
+                      <div className="flex -space-x-2 mb-4">
+                        <Image src="/assets/images/instructor-1.png" alt="Instructor 1" width={22} height={22} className="rounded-full border-2 border-white" />
+                        <Image src="/assets/images/instructor-2.png" alt="Instructor 2" width={22} height={22} className="rounded-full border-2 border-white" />
+                      </div>
+                      <h3 className="text-3xl font-medium mb-2 max-w-[300px]">Building an Enduring Brand Identity</h3>
+                      <div className="flex items-center text-xs">
+                        <Image src="/assets/images/eclipse.svg" alt="" width={8} height={8} className="mr-2" />
+                        <p>Starting February 27th 2024 - 12 seats left</p>
+                      </div>
+                    </div>
+                    <button className="bg-[rgba(0,0,0,0.3)] text-white px-4 py-2 rounded-md border border-[#DDF2FF] hover:bg-[rgba(0,0,0,0.5)] transition-colors">Enrol Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+}
